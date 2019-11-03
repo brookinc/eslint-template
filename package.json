@@ -1,0 +1,79 @@
+{
+  "name": "eslint-template",
+  "version": "1.0.0",
+  "description": "A Javascript/Typescript linting template using ESLint, Prettier, and EditorConfig.",
+  "main": "",
+  "scripts": {
+    "test": "eslint --ext .ts --ext js .",
+    "fix": "eslint --ext .ts --ext js --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brookinc/eslint-template.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "editorconfig",
+    "vscode"
+  ],
+  "author": "Brook McEachern",
+  "license": "MIT",
+  "homepage": "https://github.com/brookinc/eslint-template",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-require-in-package": "^1.0.3",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.4"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "useTabs": true,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "none",
+    "endOfLine": "lf"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "globals": {
+      "process": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "impliedStrict": true
+      }
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "require-in-package",
+      "prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/ban-types": "error",
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-use-before-define": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "no-undef": "error",
+      "no-unreachable": "error",
+      "require-in-package/require-in-package": 2
+    }
+  }
+}
