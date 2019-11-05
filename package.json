@@ -31,12 +31,13 @@
     "typescript": "^3.6.4"
   },
   "prettier": {
+    "useTabs": false,
+    "tabWidth": 2,
+    "endOfLine": "lf",
     "printWidth": 120,
-    "useTabs": true,
     "semi": false,
     "singleQuote": false,
-    "trailingComma": "none",
-    "endOfLine": "lf"
+    "trailingComma": "none"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",

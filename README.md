@@ -13,6 +13,8 @@ Sample **ESLint** ([docs](https://eslint.org/docs/rules/)) and **Prettier** ([do
 
 The included settings can (of course) be modified or extended as needed for your particular use case.
 
+For settings that can be configured by both Prettier and EditorConfig (such as `useTabs`/`indent_style`, `endOfLine`/`end_of_line`, etc.), the Prettier setting, if provided, takes precedence. The only exception appears to be when using tabs for indentation -- EditorConfig's `indent_size` will set the display tab width in Visual Studio Code, but Prettier's corresponding `tabWidth` will not (it only applies when using spaces for indentation).
+
 ## Visual Studio Code
 If you open the project directory as a folder in VSCode, the provided `.vscode/settings.json` and `.vscode/extensions.json` files will be automatically recognized, and VSCode will prompt you to install the relevant extensions if necessary.
 
