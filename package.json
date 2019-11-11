@@ -4,8 +4,8 @@
   "description": "A Javascript/Typescript linting template using ESLint, Prettier, and EditorConfig.",
   "main": "",
   "scripts": {
-    "test": "eslint --ext .ts --ext js .",
-    "fix": "eslint --ext .ts --ext js --fix ."
+    "test": "eslint --ext js,jsx,ts,tsx .",
+    "fix": "eslint --ext js,jsx,ts,tsx --fix ."
   },
   "repository": {
     "type": "git",

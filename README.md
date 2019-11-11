@@ -26,6 +26,13 @@ Any auto-fixable problems can be auto-fixed by running the standard VSCode **For
 
 (If you haven't run `npm install` before opening the folder in VSCode, linting may not work properly until you've done so and have closed and reopened the VSCode workspace window.)
 
+## Additional File Types
+To make your linting and formatting rules apply to more file types, additional file extensions can be added to the list of `--ext` arguments in the `test` and `fix` script commands in `package.json`.
+
+To have the linting errors also show up within VSCode, just add the appropriate [language identifers](https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers) to the `eslint.validate` list in `.vscode/settings.json`.
+
+For example, to make your linting rules also apply to JSON files, simply add `json` to the list of `--ext` arguments, and add `"json"` and `"jsonc"` to the `eslint.validate` list.
+
 ## License
 ```
 MIT License
